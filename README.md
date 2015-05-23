@@ -26,10 +26,12 @@ On terminal run ```grunt watch```
 
 Every time you pull from the repo run ```npm install``` and ```bower install``` to make sure you have all dependencies up to date.
 
+You work ony on ```/src```
+
 # Build Instructions
 
 Navigate on terminal to the project's root folder.
 
 On terminal run ```grunt build```  
-This will concatenate and minify all assets and put the build inside the ```/public``` folder. This folder can the be copied to the public folder of the server.
+This will concatenate and minify all assets and put the build inside the ```/build``` folder. This folder can the be copied to the public folder of the server.
 
