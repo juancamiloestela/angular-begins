@@ -118,21 +118,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		filerev: {
-			options: {
-				encoding: 'utf8',
-				algorithm: 'md5',
-				length: 4
-			},
-			source: {
-				files: [{
-					src: [
-						'<%= prod %>/**/*.{jpg,jpeg,gif,png,ico,js,css,map}'
-					]
-				}]
-			}
-		},
-
 		version: {
 			options: {
 				release: 'patch'
@@ -174,7 +159,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-filerev');
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-usemin');
 	grunt.loadNpmTasks('grunt-version');
@@ -182,7 +166,7 @@ module.exports = function(grunt) {
 
 	// Default task(s).
 	grunt.registerTask('default', ['jshint','less','autoprefixer']);
-	grunt.registerTask('build', ['default', 'clean', 'copy:main', 'useminPrepare', 'concat', 'ngAnnotate', 'uglify', 'cssmin', 'filerev', 'usemin', 'version:patch']);
+	grunt.registerTask('build', ['default', 'clean', 'copy:main', 'useminPrepare', 'concat', 'ngAnnotate', 'uglify', 'cssmin', 'usemin', 'version:patch']);
 	grunt.registerTask('minor', ['build', 'version:minor']);
 	grunt.registerTask('major', ['build', 'version:major']);
 };
