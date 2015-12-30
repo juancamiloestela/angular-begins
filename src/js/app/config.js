@@ -16,6 +16,11 @@
                 controller: 'index',
                 templateUrl: 'partials/index.html'
             })
+			.when('/something/private', {
+                controller: 'index',
+                templateUrl: 'partials/index.html',
+				secure: true // this makes the router check permissions in app.js run() funct
+            })
             .otherwise({ redirectTo: '/' });
     }
 
