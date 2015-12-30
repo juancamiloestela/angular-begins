@@ -10,7 +10,8 @@
     "angular-route": "latest",
     "angular-touch": "latest",
     "angular-animate": "latest",
-    "modernizr": "latest",
+    "modernizr": "2.7.2",
+	"ng-fastclick": "~1.0.2",
     "normalize-css": "latest"
   },
   "devDependencies": {}

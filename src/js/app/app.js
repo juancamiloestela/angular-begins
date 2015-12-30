@@ -23,7 +23,7 @@
      */
     window.App.run(run);
 
-	function run($rootScope, $timeout, $location, UserFactory) {
+	function run($rootScope, $timeout, $location) {
 		$rootScope.layout = {};
 
 		$rootScope.$on('$routeChangeStart', function(event, next, current) {
